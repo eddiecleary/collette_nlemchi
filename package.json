@@ -1,0 +1,11 @@
+{
+  "name": "collette",
+  "version": "1.0.0",
+  "description": "Collette Nlemchi's Author Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Skyward Designs",
+  "license": "ISC"
+}
