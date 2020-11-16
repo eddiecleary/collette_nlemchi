@@ -2,7 +2,6 @@ const gulp = require("gulp"),
   sass = require("gulp-sass"),
   plumber = require("gulp-plumber"),
   autoprefixer = require("gulp-autoprefixer"),
-  nodemon = require("gulp-nodemon"),
   imagemin = require("gulp-imagemin"),
   rename = require("gulp-rename"),
   concat = require("gulp-concat"),
@@ -21,16 +20,16 @@ const paths = {
     dest: "./dist/css/",
   },
   images: {
-    src: "./src/images/ready/*",
-    dest: "./dist/images/",
+    src: "./src/img/*",
+    dest: "./dist/img/",
   },
   views: {
     src: "./src/views/**/*.ejs",
     dest: "./",
   },
   icons: {
-    src: "./src/images/icons/*.svg",
-    dest: "./dist/images/icons/"
+    src: "./src/img/*.svg",
+    dest: "./dist/img/"
   },
   html: {
     src: "./src/*.html",
@@ -84,28 +83,6 @@ function imgmin() {
   );
 }
 
-async function runServer(done) {
-  let called = false;
-  return await nodemon({
-    script: "app.js",
-    ignore: ["gulpfile.js", "node_modules/"],
-    env: { NODE_ENV: "development" },
-    done: done,
-  })
-    .on("start", function () {
-      if (!called) {
-        called = true;
-        done();
-      }
-    })
-    .on("restart", function () {
-      setTimeout(function () {
-        liveReload.reload();
-      }, 1000);
-    }
-  );
-}
-
 function html() {
   return( gulp
     .src(paths.html.src)
@@ -136,7 +113,7 @@ function watchTask() {
   gulp.watch(paths.html.src, html);
 }
 
-const dev = gulp.parallel([runServer, watchTask]);
+const dev = gulp.parallel(watchTask);
 const build = gulp.series([icons, imgmin, scripts, styles, html]);
 
 exports.imgmin = imgmin;

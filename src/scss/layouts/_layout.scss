@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  max-width: 1000px;
+  @include center;
+
+  @media (min-width: 768px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1400px;
+  }
+}

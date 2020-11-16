@@ -1,0 +1,21 @@
+input,
+textarea {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 3px solid $secondary;
+}
+
+  /* Scrollbar */
+  body::-webkit-scrollbar{
+    width: 12px;
+  }
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: $secondary;
+  }
+  body::-webkit-scrollbar-track {
+    background: $primary;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+  }

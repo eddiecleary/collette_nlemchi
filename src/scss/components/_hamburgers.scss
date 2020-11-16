@@ -1,0 +1,7 @@
+$hamburger-types: 'squeeze';
+$hamburger-layer-color: $black;
+$hamburger-layer-width: 27px;
+$hamburger-layer-spacing: 4px;
+$hamburger-hover-opacity: 1;
+
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
