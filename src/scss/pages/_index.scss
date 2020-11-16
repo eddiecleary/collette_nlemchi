@@ -395,6 +395,7 @@
       margin-top: 1rem;
       width: 100%;
       @include primary-btn;
+      cursor: pointer;
     }
   }
 
@@ -452,6 +453,7 @@
           button {
             margin-top: 0.8rem;
             @include primary-btn;
+            cursor: pointer;
         }
         }
       }
