@@ -34,6 +34,7 @@ html {
       top: 100%;
       background-color: $secondary;
       width: 100vw;
+      z-index: 2;
 
       @media (min-width: 768px) {
         left: -100px;
