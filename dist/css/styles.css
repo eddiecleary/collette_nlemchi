@@ -354,6 +354,7 @@ html {
   top: 100%;
   background-color: #E9C690;
   width: 100vw;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -859,6 +860,22 @@ html {
   }
 }
 
+@media (min-width: 1450px) {
+  #contact {
+    padding-bottom: 150px;
+  }
+}
+
+#contact .container {
+  max-width: 450px;
+}
+
+@media (min-width: 768px) {
+  #contact .container {
+    max-width: initial;
+  }
+}
+
 #contact .heading h4 {
   font-size: 2rem;
 }
@@ -888,7 +905,7 @@ html {
 }
 
 #contact .contactform {
-  width: 85%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
@@ -984,6 +1001,7 @@ html {
   border: 0;
   padding: 1rem 0;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 #contact .lower {
@@ -1065,6 +1083,7 @@ html {
   border: 0;
   padding: 1rem 0;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 #contact .lower .flexWrap .social {

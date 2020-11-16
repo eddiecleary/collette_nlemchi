@@ -313,6 +313,18 @@
   background-image: url('./../img/contactbg.jpg');
   color: $white;
 
+  @media (min-width: 1450px) {
+    padding-bottom: 150px;
+  }
+
+  .container {
+    max-width: 450px;
+
+    @media (min-width: 768px) {
+      max-width: initial;
+    }
+  }
+
   .heading {
 
     h4 {
@@ -334,7 +346,7 @@
   }
 
   .contactform {
-    width: 85%;
+    width: 100%;
     @include center;
     margin-top: 2rem;
 
