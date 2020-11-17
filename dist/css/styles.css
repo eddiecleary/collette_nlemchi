@@ -588,11 +588,12 @@ html {
 }
 
 #hero .heroWrap .heroImageWrap img {
-  max-width: 200px;
+  max-width: 240px;
 }
 
 @media (min-width: 768px) {
   #hero .heroWrap .heroImageWrap img {
+    margin-top: 3rem;
     max-width: 280px;
   }
 }
@@ -601,7 +602,7 @@ html {
   #hero .heroWrap .heroImageWrap img {
     -webkit-transform: translateX(75px);
     transform: translateX(75px);
-    max-width: 350px;
+    max-width: 400px;
   }
 }
 

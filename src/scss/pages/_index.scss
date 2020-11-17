@@ -95,15 +95,16 @@
     .heroImageWrap {
 
       img {
-        max-width: 200px;
+        max-width: 240px;
 
         @media (min-width: 768px) {
+          margin-top: 3rem;
           max-width: 280px;
         }
 
         @media (min-width: 992px) {
           transform: translateX(75px);
-          max-width: 350px;
+          max-width: 400px;
         }
       }
     }

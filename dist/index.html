@@ -27,7 +27,7 @@
               <a class="navlink" href="#otherbooks">Books</a>
             </li>
             <li class="navitem">
-              <a class="navlink" href="#about">About</a>
+              <a class="navlink aboutlink" href="#about">About</a>
             </li>
             <li class="navitem">
               <a class="navlink" href="#contact">Contact</a>
@@ -238,14 +238,26 @@
 
   <script>
     const navToggler = document.querySelector('.hamburger');
+    const navLinks = document.querySelectorAll('.navlink');
     const nav = document.querySelector('.nav');
     const year = document.querySelector('.year');
+    const about = document.querySelector('.aboutlink');
 
+    // Toggle hamburger
     navToggler.addEventListener('click', function () {
       navToggler.classList.toggle('is-active');
       nav.classList.toggle('show');
     })
 
+    // Close nav drawer when click a link
+    navLinks.forEach(navLink => {
+      navLink.addEventListener('click', event => {
+        navToggler.classList.remove('is-active');
+        nav.classList.remove('show');
+      })
+    });
+
+    // Add copyright current year
     year.textContent = new Date().getFullYear();
   </script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
